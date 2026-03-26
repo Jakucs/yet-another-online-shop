@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="displayProducts.css">
+</head>
+<body>
+
+<div id="root">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top shadow-sm">
+  <div class="container">
+    
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="bi bi-shop"></i>
+      <span class="ms-2 fw-light">Hibrid team's webshop</span>
+    </a>
+
+    <!-- MOBILE TOGGLE -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Főoldal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Termékek</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutus">Rólunk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Kapcsolat</a>
+        </li>
+      </ul>
+
+      <!-- JOBB OLDAL -->
+      <div class="d-flex align-items-center gap-3">
+
+        <!-- KERESŐ -->
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+            <i class="bi bi-search"></i>
+          </button>
+          <div class="dropdown-menu p-2">
+            <input type="text" class="form-control" placeholder="Keresés...">
+          </div>
+        </div>
+
+        <!-- KOSÁR -->
+        <button id="cartBtn" class="btn position-relative">
+          <i class="bi bi-basket3-fill"></i>
+          <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge bg-primary">
+            0
+          </span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+</div>
+
+    <!-- MÓDOSÍTÁSHOZ: -->
+    <form class="ms-3 mt-3 d-none" id="productForm">
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Product name:</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" class="form-control" id="price">
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" id="description"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <input type="text" class="form-control" id="category">
+        </div>
+
+        <div class="mb-3">
+            <label for="stock" class="form-label">Stock:</label>
+            <input type="number" class="form-control" id="stock">
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image:</label>
+            <input type="text" class="form-control" id="image">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Product</button>
+    </form>
+<div id="aboutus"></div>
+<div id="footer"></div>
+    <script src="displayProducts.js"></script>
+</body>
+</html>
